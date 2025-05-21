@@ -1,5 +1,7 @@
-import com.tu.paquete.model.Student;
-import com.tu.paquete.dto.StudentDTO;
+package com.example.iticbcn.mongoAPI.Service;
+
+import com.example.iticbcn.mongoAPI.DTO.StudentDTO;
+import com.example.iticbcn.mongoAPI.Model.Student;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 

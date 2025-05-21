@@ -1,7 +1,6 @@
-package com.tu.paquete.mapper;
-
-import com.tu.paquete.model.Student;
-import com.tu.paquete.dto.StudentDTO;
+package com.example.iticbcn.mongoAPI.Mapper;
+import com.example.iticbcn.mongoAPI.DTO.StudentDTO;
+import com.example.iticbcn.mongoAPI.Model.Student;
 import org.mapstruct.Mapper;
 import java.util.List;
 

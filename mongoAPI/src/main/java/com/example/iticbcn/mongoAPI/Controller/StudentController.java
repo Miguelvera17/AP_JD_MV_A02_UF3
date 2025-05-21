@@ -1,25 +1,30 @@
-import com.tu.paquete.dto.StudentDTO;
-import com.tu.paquete.model.Student;
-import com.tu.paquete.service.StudentService;
+package com.example.iticbcn.mongoAPI.Controller;
+import com.example.iticbcn.mongoAPI.Service.StudentService;
+import com.example.iticbcn.mongoAPI.DTO.StudentDTO;
+import com.example.iticbcn.mongoAPI.Model.Student; 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping("/api/v1/students")
+@RequestMapping("/students")
 public class StudentController {
 
     private final StudentService studentService;
 
-    @Autowired
     public StudentController(StudentService studentService) {
         this.studentService = studentService;
     }
 
-    @PostMapping("/save")
+    @PostMapping
     public Mono<Student> save(@RequestBody StudentDTO studentDTO) {
         return studentService.save(studentDTO);
+    }
+
+    @GetMapping
+    public Flux<Student> findAll() {
+        return studentService.findAll();
     }
 
     @GetMapping("/{id}")
@@ -27,12 +32,7 @@ public class StudentController {
         return studentService.findById(id);
     }
 
-    @GetMapping("/all")
-    public Flux<Student> findAll() {
-        return studentService.findAll();
-    }
-
-    @PutMapping("/update")
+    @PutMapping
     public Mono<Student> update(@RequestBody StudentDTO studentDTO) {
         return studentService.update(studentDTO);
     }
@@ -42,4 +42,5 @@ public class StudentController {
         return studentService.delete(id);
     }
 }
+
 

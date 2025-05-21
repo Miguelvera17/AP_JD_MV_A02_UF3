@@ -1,4 +1,4 @@
-package com.iticbcn.webflux.apimongo.config;
+package com.example.iticbcn.mongoAPI.Config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.config.EnableWebFlux;
