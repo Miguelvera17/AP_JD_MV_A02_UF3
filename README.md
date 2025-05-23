@@ -5,8 +5,11 @@
 
 ### Afegiu un endpoint que cerqui per un camp de tipus String on feu servir regex. Afegiu el que calgui al servei, repositori, etc.
 
+Creamos un endpoint que busca por regex el nombre de alumnos en el campo 'name'
 
+![alt text](image-5.png)
 
+![alt text](image-6.png)
 
 ### Què caracteritza una api reactiva com aquesta i què la fa diferent d’una api síncrona amb MVC com les treballades anteriorment?
 
@@ -43,3 +46,24 @@ No utilitza setters perquè els valors dels atributs són immutables, és a dir,
 
 Per tant, un record no utilitza setters, només proporciona getters implícits, i això està justificat pel seu disseny orientat a la simplicitat, la claredat i la seguretat.
 
+## CAPTURAS DE EJECUCIÓN
+
+# SAVE
+
+![alt text](image.png)
+
+# GET BY ID
+
+![alt text](image-1.png)
+
+# GET ALL
+
+![alt text](image-2.png)
+
+# PUT
+
+![alt text](image-3.png)
+
+# DELETE BY ID
+
+![alt text](image-4.png)

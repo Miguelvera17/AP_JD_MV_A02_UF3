@@ -48,4 +48,10 @@ public class StudentServiceImpl implements StudentService {
     public Mono<Void> delete(String id) {
         return studentRepo.deleteById(id);
     }
+
+    @Override
+    public Flux<Student> findByNamePattern(String regexName) {
+        String regex = ".*" + regexName + ".*";
+        return studentRepo.findByNameRegex(regex);
+    }
 }

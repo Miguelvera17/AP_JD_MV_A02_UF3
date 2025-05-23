@@ -16,4 +16,6 @@ public interface StudentService {
     Mono<Student> update(StudentDTO studentDTO);
 
     Mono<Void> delete(String id);
+
+    public Flux<Student> findByNamePattern(String pattern);
 }

@@ -41,4 +41,9 @@ public class StudentController {
     public Mono<Void> delete(@PathVariable String id) {
         return studentService.delete(id);
     }
+
+    @GetMapping("/regex")
+    public Flux<Student> searchByName(@RequestParam String name) {
+        return studentService.findByNamePattern(name);
+    }
 }
